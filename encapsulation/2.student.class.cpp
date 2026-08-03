@@ -5,13 +5,11 @@ using namespace std;
 
 class Student
 {
-public:
-    // attributes
+private:
+    // all attributes private ~ perfect encapsulation
     int id;
     string name;
     int age;
-
-private:
     float *gpa;
     string division;
 
@@ -25,6 +23,27 @@ public:
         this->gpa = new float(gpa);
         this->division = division;
     };
+
+    void setGPA(float value)
+    {
+        // layer of authentication
+        *this->gpa = value;
+    }
+
+    float getGPA()
+    {
+        return *this->gpa;
+    }
+
+    void setAge(int value)
+    {
+        this->age = value;
+    }
+
+    int getAge()
+    {
+        return this->age;
+    }
 
     // Behaviour / Methods / Functions
     void study()
@@ -55,11 +74,23 @@ int main()
 {
     Student sunny(1, "Sunny", 12, 3.50, "first division");
 
-    cout << sunny.name << endl;
-    cout << sunny.age << endl;
-    // cout << sunny.division << endl; access denied
+    // cout << sunny.age << endl; access denied
 
-    sunny.study();
+    float gpa = sunny.getGPA();
+    cout << gpa << endl;
+
+    sunny.setGPA(3.90);
+
+    float u_gpa = sunny.getGPA();
+    cout << u_gpa << endl;
+
+    float age = sunny.getAge();
+    cout << age << endl;
+
+    sunny.setAge(15);
+
+    float u_age = sunny.getAge();
+    cout << u_age << endl;
 
     // sunny.result();
 
