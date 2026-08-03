@@ -1,0 +1,6 @@
+cmp
+
+# c or c++ file run command:
+# g++ 4.student.class.cpp -o cmp
+# ./cmp
+# cmp file == compiler file
