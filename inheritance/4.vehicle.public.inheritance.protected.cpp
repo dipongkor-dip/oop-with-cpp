@@ -7,10 +7,9 @@ class Vehicle
 {
 public:
     string name;
-    int noOfTyres;
     string model;
+    int noOfTyres;
 
-public:
     Vehicle(string v_name, string v_model, int v_noOfTyres)
     {
         cout << "Inside Vehicle constructor" << endl;

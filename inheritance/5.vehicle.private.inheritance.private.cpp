@@ -7,8 +7,8 @@ class Vehicle
 {
 private:
     string name;
-    int noOfTyres;
     string model;
+    int noOfTyres;
 
 public:
     Vehicle(string v_name, string v_model, int v_noOfTyres)
@@ -32,7 +32,6 @@ public:
 
 class Car : private Vehicle
 {
-    // vehicle attributes are private
 public:
     int noOfDoors;
     string transmissionType;

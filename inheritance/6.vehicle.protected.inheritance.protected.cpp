@@ -7,8 +7,8 @@ class Vehicle
 {
 protected:
     string name;
-    int noOfTyres;
     string model;
+    int noOfTyres;
 
 public:
     Vehicle(string v_name, string v_model, int v_noOfTyres)
@@ -32,7 +32,6 @@ public:
 
 class Car : protected Vehicle
 {
-    // vehicle attributes are protected
 public:
     int noOfDoors;
     string transmissionType;
