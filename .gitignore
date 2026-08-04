@@ -1,5 +1,8 @@
 cmp
 
+# default compiler file
+a.out 
+
 # c or c++ file run command:
 # g++ 4.student.class.cpp -o cmp
 # ./cmp

@@ -5,6 +5,7 @@ using namespace std;
 
 class Student
 {
+    // default access modifier is private
 public:
     // attributes
     int id;
