@@ -42,9 +42,13 @@ public:
     {
         // this -> A instance
         Complex temp;
-        temp.real = this->real - B.real;
-        temp.imaginary = this->imaginary - B.imaginary;
+        temp.real = real - B.real;
+        temp.imaginary = imaginary - B.imaginary;
         return temp;
+    }
+    bool operator==(const Complex &B)
+    {
+        return real == B.real & imaginary == B.imaginary;
     }
 
     void print()
@@ -69,6 +73,10 @@ int main()
 
     summation.print();   // [4 + i8]
     subtraction.print(); // [0 + i2]
+
+    bool isEqual = A == B;
+
+    cout << isEqual << endl;
 
     return 0;
 }
