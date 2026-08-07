@@ -20,7 +20,8 @@ float circlePerimeter(float r)
     return 2 * PI * r;
 }
 
-void func(){
+void func()
+{
     int x = 3, y = 5;
     cout << MAXX(x, y) << endl;
 }
